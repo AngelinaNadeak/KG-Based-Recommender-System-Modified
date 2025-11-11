@@ -35,12 +35,15 @@
 - *My nDCG@5 Score:* 0.1217
 
 ## Conclusion
-This hyperparameter tuning experiment was conducted to optimize a TransE-based Knowledge Graph Recommender System (KGRS), with a primary focus on improving the nDCG@5 metric. Starting from an unsatisfactory baseline performance, a series of systematic experiments were performed on key parameters, including embedding dimensions, learning rate, and negative sampling rate, while ensuring reproducibility by setting a fixed random seed. The optimal configuration found consists of a batch_size of 128, embedding dimensions of 64, a learning rate of 5e-4, and a negative sampling rate of 3. This setup achieved a peak performance of AUC = 0.8861 and nDCG@5 = 0.1077, significantly improving upon the baseline and surpassing the initial project target.
-
-An insightful finding emerges when comparing this result to the original author's benchmark (AUC: 0.7003, nDCG@5: 0.1844). Our model achieves a substantially superior AUC score, indicating its strength as a "Generalist" model with an excellent overall ability to distinguish between relevant and irrelevant items. While its top-k precision (nDCG@5) has not yet reached the author's highly specialized performance, this outcome highlights a trade-off between general ranking accuracy and top-k precision. Overall, this experiment successfully produced a robust model with a strong balance and superior general understanding, while providing clear directions for future work, such as exploring stronger regularization, to further enhance top-k ranking performance.
+Based on the experiments conducted, it can be concluded that:
+- The KGRS model using the TransE algorithm provides fairly accurate recommendation results after parameter tuning.
+- The AUC value increased from 0.8861 to 0.9002, while the nDCG@5 value improved from 0.1078 to 0.1217.
+- Increasing the embedding dimension and the number of epochs allowed the model to better learn the relationships between entities.
+- As the model complexity increases, the training time becomes longer; however, the results obtained are more satisfactory.
 
 ## References
 - Q. Guo et al., "A Survey on Knowledge Graph-Based Recommender Systems," IEEE Transactions on Knowledge and Data Engineering, pp. 1–1, 2020, doi: 10/ghxwqg.
 - D. Bahdanau, K. Cho, and Y. Bengio, "Neural Machine Translation by Jointly Learning to Align and Translate," in 3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015. [Online]. Available: [http://arxiv.org/abs/1409.0473](http://arxiv.org/abs/1409.0473)
 - https://github.com/Layheng-Hok/KG-Based-Recommender-System?tab=readme-ov-file
 - https://github.com/bluga404/KG-Based-Recommender-System-Modified
+
